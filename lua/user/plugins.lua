@@ -7,6 +7,11 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
+  use 'nvim-tree/nvim-tree.lua'
+  use 'ellisonleao/gruvbox.nvim'
+  use 'glepnir/dashboard-nvim' -- start screen
+  use 'scrooloose/nerdtree' -- File explorer
+  use 'tiagofumo/vim-nerdtree-syntax-highlight'
   use { 'akinsho/toggleterm.nvim', tag = '*' }
   use 'tribela/vim-transparent'
   use 'Luxed/ayu-vim'

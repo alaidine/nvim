@@ -18,17 +18,20 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 -- New tab
 keymap.set('n', 'te', ':tabedit<Cr>')
 -- Split window
-keymap.set('n', 'ss', ':split<Return><C-w>w')
-keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
+keymap.set('n', 'zz', ':split<Return><C-w>w')
+keymap.set('n', 'zv', ':vsplit<Return><C-w>w')
 -- Move window
 keymap.set('n', '<Space>', '<C-w>w')
-keymap.set('', 'sh', '<C-w>h')
-keymap.set('', 'sk', '<C-w>k')
-keymap.set('', 'sj', '<C-w>j')
-keymap.set('', 'sl', '<C-w>l')
+keymap.set('n', 'zh', '<C-w>h')
+keymap.set('n', 'zk', '<C-w>k')
+keymap.set('n', 'zj', '<C-w>j')
+keymap.set('n', 'zl', '<C-w>l')
 
 -- Resize window
 keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
+
+keymap.set('n', '<S-n>', ':NvimTreeFocus<Cr>')
+keymap.set('n', '<S-f>', ':Telescope file_browser<Cr>')
