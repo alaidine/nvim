@@ -31,6 +31,10 @@ return packer.startup(function(use)
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
 
+	use("folke/zen-mode.nvim")
+
+	use("akinsho/nvim-bufferline.lua")
+
 	use("tribela/vim-transparent")
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
