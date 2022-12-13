@@ -31,6 +31,10 @@ return packer.startup(function(use)
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
 
+	use("Shatur/neovim-ayu")
+
+	use("ellisonleao/gruvbox.nvim")
+
 	use("folke/zen-mode.nvim")
 
 	use("akinsho/nvim-bufferline.lua")
