@@ -31,6 +31,8 @@ return packer.startup(function(use)
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
 
+	use("glepnir/dashboard-nvim")
+
 	use("Shatur/neovim-ayu")
 
 	use("ellisonleao/gruvbox.nvim")
