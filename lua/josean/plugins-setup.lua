@@ -31,6 +31,11 @@ return packer.startup(function(use)
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
 
+	use({
+		"svrana/neosolarized.nvim",
+		requires = { "tjdevries/colorbuddy.nvim" },
+	})
+
 	use("glepnir/dashboard-nvim")
 
 	use("Shatur/neovim-ayu")
