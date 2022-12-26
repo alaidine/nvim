@@ -13,22 +13,22 @@ packer.startup(function(use)
 	-- essential plugins
 	use("windwp/nvim-autopairs")
 	use("nvim-lua/plenary.nvim")
+	use("tribela/vim-transparent")
+	use("tpope/vim-surround")
+
+	-- dashboard
+	use("glepnir/dashboard-nvim")
+
+	-- Telescope
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-file-browser.nvim")
-	use("tribela/vim-transparent")
-	use("glepnir/dashboard-nvim")
-	use("tpope/vim-surround")
 
 	-- colorschemes
 	use("RRethy/nvim-base16")
 	use("ellisonleao/gruvbox.nvim")
-	use({
-		"rose-pine/neovim",
-		as = "rose-pine",
-		config = function()
-			vim.cmd("colorscheme rose-pine")
-		end,
-	})
+	use("Shatur/neovim-ayu")
+	use("navarasu/onedark.nvim")
+	use("norcalli/nvim-colorizer.lua")
 
 	-- autocompletion
 	use("hrsh7th/cmp-buffer")
