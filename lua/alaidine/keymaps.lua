@@ -6,7 +6,7 @@ local keymap = vim.keymap
 keymap.set("n", "<leader>ff", ":Telescope find_files<cr>")
 keymap.set("n", "<leader>fr", ":Telescope live_grep<cr>")
 keymap.set("n", "<leader>fo", ":Telescope oldfiles<cr>")
-
+keymap.set("n", "<leader>bb", ":Telescope file_browser<cr>")
 
 -- spliting panes
 keymap.set("n", "<leader>zz", ":split<cr>")
