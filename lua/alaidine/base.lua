@@ -8,12 +8,13 @@ vim.wo.relativenumber = true
 
 set.autoindent = true
 set.smartindent = true
-set.hlsearch = true
-
-vim.laststatus = 2
-vim.shiftwidth = 2
 set.tabstop = 2
 set.softtabstop = 2
+set.expandtab = true
+
+set.hlsearch = true
+vim.shiftwidth = 2
+vim.laststatus = 2
 set.wrap = false
 set.shell = 'zsh'
 vim.cmdheight = 1
@@ -24,6 +25,6 @@ set.smartcase = true
 
 set.cursorline = true
 
--- set.termguicolors = true
+set.termguicolors = true
 set.background = "dark"
 set.signcolumn = "yes"
