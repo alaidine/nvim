@@ -8,6 +8,8 @@ return require('packer').startup(function(use)
   use 'theprimeagen/harpoon'
   use 'tpope/vim-fugitive'
   use 'mbbill/undotree'
+  use 'glepnir/lspsaga.nvim'
+  use 'onsails/lspkind.nvim'
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
     requires = { {'nvim-lua/plenary.nvim'} }
@@ -34,6 +36,9 @@ return require('packer').startup(function(use)
   
       -- Autocompletion
       {'hrsh7th/nvim-cmp'},     -- Required
+      {'hrsh7th/cmp-buffer'},
+      {'hrsh7th/cmp-path'},
+      {'hrsh7th/cmp-cmdline'},
       {'hrsh7th/cmp-nvim-lsp'}, -- Required
       {'L3MON4D3/LuaSnip'},     -- Required
     }
