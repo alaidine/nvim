@@ -35,6 +35,8 @@ return require('packer').startup(function(use)
       {'williamboman/mason-lspconfig.nvim'}, -- Optional
   
       -- Autocompletion
+      {'saadparwaiz1/cmp_luasnip'},
+      {'rafamadriz/friendly-snippets'},
       {'hrsh7th/nvim-cmp'},     -- Required
       {'hrsh7th/cmp-buffer'},
       {'hrsh7th/cmp-path'},

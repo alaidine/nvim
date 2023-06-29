@@ -2,6 +2,8 @@ local status, cmp = pcall(require, "cmp")
 if (not status) then return end
 local lspkind = require 'lspkind'
 
+require("luasnip.loaders.from_vscode").lazy_load()
+
 local function formatForTailwindCSS(entry, vim_item)
   if vim_item.kind == 'Color' and entry.completion_item.documentation then
     local _, _, r, g, b = string.find(entry.completion_item.documentation, '^rgb%((%d+), (%d+), (%d+)')
@@ -9,7 +11,7 @@ local function formatForTailwindCSS(entry, vim_item)
       local color = string.format('%02x', r) .. string.format('%02x', g) .. string.format('%02x', b)
       local group = 'Tw_' .. color
       if vim.fn.hlID(group) < 1 then
-        vim.api.nvim_set_hl(0, group, { fg = '#' .. color })
+          vim.api.nvim_set_hl(0, group, { fg = '#' .. color })
       end
       vim_item.kind = "●"
       vim_item.kind_hl_group = group
@@ -38,6 +40,7 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
+    { name = "luasnip" },
     { name = "buffer" },
     { name = "buffer" },
     { name = "path"},
