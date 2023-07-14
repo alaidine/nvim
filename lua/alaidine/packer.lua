@@ -6,10 +6,11 @@ return require('packer').startup(function(use)
   use 'akinsho/nvim-bufferline.lua'
   use 'ellisonleao/gruvbox.nvim'
   use 'theprimeagen/harpoon'
-  use 'tpope/vim-fugitive'
   use 'mbbill/undotree'
   use 'glepnir/lspsaga.nvim'
   use 'onsails/lspkind.nvim'
+  use 'lewis6991/gitsigns.nvim'
+  use 'dinhhuy258/git.nvim' -- For git blame & browse
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
     requires = { {'nvim-lua/plenary.nvim'} }
