@@ -13,6 +13,7 @@ return require("packer").startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
 	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 	use("dinhhuy258/git.nvim") -- For git blame & browse
+	use("nvim-tree/nvim-tree.lua")
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
