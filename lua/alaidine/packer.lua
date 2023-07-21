@@ -2,6 +2,7 @@ vim.cmd([[packadd packer.nvim]])
 
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
+	use("marko-cerovac/material.nvim")
 	use("windwp/nvim-autopairs")
 	use("akinsho/nvim-bufferline.lua")
 	use("ellisonleao/gruvbox.nvim")
