@@ -6,4 +6,4 @@ function SetColorscheme(colorscheme)
 	require("alaidine.colors." .. colorscheme)
 end
 
-SetColorscheme("material")
+SetColorscheme("onedark")

@@ -16,6 +16,7 @@ return require("packer").startup(function(use)
 	use("dinhhuy258/git.nvim") -- For git blame & browse
 	use("nvim-lualine/lualine.nvim")
 	use("christoomey/vim-tmux-navigator")
+	use("navarasu/onedark.nvim")
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use("catppuccin/nvim")
 	use({
