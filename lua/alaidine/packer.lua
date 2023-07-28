@@ -17,6 +17,7 @@ return require("packer").startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 	use("christoomey/vim-tmux-navigator")
 	use("navarasu/onedark.nvim")
+	use("folke/tokyonight.nvim")
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use("catppuccin/nvim")
 	use({
