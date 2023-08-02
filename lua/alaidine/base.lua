@@ -1,5 +1,8 @@
 vim.cmd("autocmd!")
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
@@ -38,6 +41,7 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   pattern = '*',
   command = "set nopaste"
 })
+
 
 -- Add asterisks in block comments
 vim.opt.formatoptions:append { 'r' }
