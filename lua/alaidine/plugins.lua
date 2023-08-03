@@ -13,14 +13,15 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
   "folke/which-key.nvim",
-  "lewis6991/gitsigns.nvim",
-  "nvim-tree/nvim-tree.lua",
+  "xiyaowong/transparent.nvim",
+  "ibhagwan/fzf-lua",
+  "dinhhuy258/git.nvim",
   "folke/neodev.nvim",
+  "nvim-tree/nvim-tree.lua",
   "kyazdani42/nvim-web-devicons",
-  "amirrezaask/fuzzy.nvim",
   "onsails/lspkind.nvim",
   "nekonako/xresources-nvim",
-  {'akinsho/bufferline.nvim', version = "*"},
+  "nvim-lualine/lualine.nvim",
   { "folke/neoconf.nvim", cmd = "Neoconf" },
   {"nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
   {

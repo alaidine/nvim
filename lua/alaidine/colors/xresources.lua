@@ -1,1 +1,1 @@
-require("xresources")
+vim.cmd("colorscheme xresources")
