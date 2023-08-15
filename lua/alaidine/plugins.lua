@@ -12,7 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-  "folke/which-key.nvim",
+  "Tsuzat/NeoSolarized.nvim",
+  "Shatur/neovim-ayu",
+  "ellisonleao/gruvbox.nvim",
   "xiyaowong/transparent.nvim",
   "ibhagwan/fzf-lua",
   "dinhhuy258/git.nvim",
@@ -23,7 +25,9 @@ local plugins = {
   "nekonako/xresources-nvim",
   "nvim-lualine/lualine.nvim",
   { "folke/neoconf.nvim", cmd = "Neoconf" },
-  {"nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
+  { "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
+  { 'windwp/nvim-autopairs', event = "InsertEnter" },
+  { 'glepnir/dashboard-nvim', event = 'VimEnter' },
   {
     "nvim-telescope/telescope.nvim", tag = "0.1.2",
     dependencies = { "nvim-lua/plenary.nvim" }
@@ -49,9 +53,16 @@ local plugins = {
     }
   },
   {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter",
-  },
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
+    opts = {
+
+    }
+  }
 }
 
 local opts = {}
