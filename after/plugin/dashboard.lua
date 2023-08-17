@@ -37,7 +37,7 @@ require("dashboard").setup {
       },
       {
         icon = '',
-        desc = 'Find World',
+        desc = 'Find Word',
         key = 'w',
         keymap = 'SPC f r',
         action = 'Telescope live_grep'
