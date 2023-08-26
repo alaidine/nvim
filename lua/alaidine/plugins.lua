@@ -16,7 +16,6 @@ local plugins = {
   "Shatur/neovim-ayu",
   "ellisonleao/gruvbox.nvim",
   "xiyaowong/transparent.nvim",
-  "ibhagwan/fzf-lua",
   "dinhhuy258/git.nvim",
   "folke/neodev.nvim",
   "nvim-tree/nvim-tree.lua",
@@ -28,9 +27,14 @@ local plugins = {
   { "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
   { 'windwp/nvim-autopairs', event = "InsertEnter" },
   { 'glepnir/dashboard-nvim', event = 'VimEnter' },
+  { "akinsho/bufferline.nvim", version = "*" },
   {
     "nvim-telescope/telescope.nvim", tag = "0.1.2",
     dependencies = { "nvim-lua/plenary.nvim" }
+  },
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
   },
   {
     'VonHeikemen/lsp-zero.nvim',
