@@ -22,6 +22,7 @@ local plugins = {
   "kyazdani42/nvim-web-devicons",
   "onsails/lspkind.nvim",
   "nekonako/xresources-nvim",
+  "navarasu/onedark.nvim",
   "nvim-lualine/lualine.nvim",
   { "folke/neoconf.nvim", cmd = "Neoconf" },
   { "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
