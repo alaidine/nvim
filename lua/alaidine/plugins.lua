@@ -24,6 +24,7 @@ local plugins = {
   "nekonako/xresources-nvim",
   "navarasu/onedark.nvim",
   "nvim-lualine/lualine.nvim",
+  { "rose-pine/neovim", name = 'rose-pine' },
   { "folke/neoconf.nvim", cmd = "Neoconf" },
   { "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
   { 'windwp/nvim-autopairs', event = "InsertEnter" },
