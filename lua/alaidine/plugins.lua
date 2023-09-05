@@ -24,6 +24,7 @@ local plugins = {
   "nekonako/xresources-nvim",
   "navarasu/onedark.nvim",
   "nvim-lualine/lualine.nvim",
+  { "catppuccin/nvim", name = "catppuccin" , priority = 1000 },
   { "rose-pine/neovim", name = 'rose-pine' },
   { "folke/neoconf.nvim", cmd = "Neoconf" },
   { "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },

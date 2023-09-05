@@ -7,4 +7,4 @@ local function setColorscheme(colors)
 	require("alaidine.colors." .. colors)
 end
 
-setColorscheme("onedark")
+setColorscheme("catppuccin")
