@@ -12,7 +12,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+  "Heliferepo/VimTek",
+  "Heliferepo/VimUtils",
+  "RRethy/nvim-base16",
   "Tsuzat/NeoSolarized.nvim",
+  "lewis6991/gitsigns.nvim",
   "Shatur/neovim-ayu",
   "ellisonleao/gruvbox.nvim",
   "xiyaowong/transparent.nvim",
@@ -31,13 +35,10 @@ local plugins = {
   { 'windwp/nvim-autopairs', event = "InsertEnter" },
   { 'glepnir/dashboard-nvim', event = 'VimEnter' },
   { "akinsho/bufferline.nvim", version = "*" },
+  { "christoomey/vim-tmux-navigator" },
   {
     "nvim-telescope/telescope.nvim", tag = "0.1.2",
     dependencies = { "nvim-lua/plenary.nvim" }
-  },
-  {
-    "christoomey/vim-tmux-navigator",
-    lazy = false,
   },
   {
     'VonHeikemen/lsp-zero.nvim',
