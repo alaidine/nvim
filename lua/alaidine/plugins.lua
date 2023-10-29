@@ -15,6 +15,7 @@ local plugins = {
   "Heliferepo/VimTek",
   "Heliferepo/VimUtils",
   "RRethy/nvim-base16",
+  "HelifeWasTaken/VimUtils",
   "Tsuzat/NeoSolarized.nvim",
   "lewis6991/gitsigns.nvim",
   "Shatur/neovim-ayu",
@@ -28,6 +29,7 @@ local plugins = {
   "nekonako/xresources-nvim",
   "navarasu/onedark.nvim",
   "nvim-lualine/lualine.nvim",
+  { "akinsho/toggleterm.nvim", version = "*", config = true },
   { "catppuccin/nvim", name = "catppuccin" , priority = 1000 },
   { "rose-pine/neovim", name = 'rose-pine' },
   { "folke/neoconf.nvim", cmd = "Neoconf" },
@@ -35,10 +37,14 @@ local plugins = {
   { 'windwp/nvim-autopairs', event = "InsertEnter" },
   { 'glepnir/dashboard-nvim', event = 'VimEnter' },
   { "akinsho/bufferline.nvim", version = "*" },
-  { "christoomey/vim-tmux-navigator" },
+  { "christoomey/vim-tmux-navigator", event = "BufReadPre" },
   {
     "nvim-telescope/telescope.nvim", tag = "0.1.2",
-    dependencies = { "nvim-lua/plenary.nvim" }
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "jvgrootveld/telescope-zoxide",
+      "nvim-lua/popup.nvim"
+    }
   },
   {
     'VonHeikemen/lsp-zero.nvim',
