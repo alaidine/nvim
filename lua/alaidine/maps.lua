@@ -10,9 +10,7 @@ map("n", "te", ":tabedit<cr>")
 
 map("n", "<Tab>", ":bnext<cr>")
 map("n", "<S-Tab>", ":bprevious<cr>")
-map("n", "<leader>bb", ":buffers<cr>")
 map("n", "<leader>bd", ":bdelete<cr>")
-map("n", "<leader>bs", ":b ")
 
 map("n", "<leader>tf", ":ToggleTerm direction=float<cr>")
 map("n", "<leader>tv", ":ToggleTerm direction=vertical size=50<cr>")

@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+  "Mofiqul/dracula.nvim",
   "Heliferepo/VimTek",
   "Heliferepo/VimUtils",
   "RRethy/nvim-base16",
