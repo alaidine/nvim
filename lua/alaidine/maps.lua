@@ -18,3 +18,5 @@ map("n", "<leader>tt", ":ToggleTerm direction=tab<cr>")
 map("n", "<leader>th", ":ToggleTerm<cr>")
 
 map("n", "<leader>h", ":EpiHeader<cr>")
+
+map("n", "<leader>l", ":LazyGit<cr>")

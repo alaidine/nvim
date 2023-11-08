@@ -23,7 +23,6 @@ local plugins = {
   "Shatur/neovim-ayu",
   "ellisonleao/gruvbox.nvim",
   "xiyaowong/transparent.nvim",
-  "dinhhuy258/git.nvim",
   "folke/neodev.nvim",
   "nvim-tree/nvim-tree.lua",
   "kyazdani42/nvim-web-devicons",
@@ -39,7 +38,7 @@ local plugins = {
   { 'windwp/nvim-autopairs', event = "InsertEnter" },
   { 'glepnir/dashboard-nvim', event = 'VimEnter' },
   { "akinsho/bufferline.nvim", version = "*" },
-  { "christoomey/vim-tmux-navigator", event = "BufReadPre" },
+  { "christoomey/vim-tmux-navigator", event = "VeryLazy" },
   {
     "nvim-telescope/telescope.nvim", tag = "0.1.2",
     dependencies = {
@@ -78,7 +77,14 @@ local plugins = {
     opts = {
 
     }
-  }
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+    },
+  },
 }
 
 local opts = {}
