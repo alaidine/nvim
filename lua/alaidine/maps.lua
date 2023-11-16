@@ -6,7 +6,7 @@ local map = vim.keymap.set
 map("n", "<leader>w", "<C-w>")
 map("n", "<space><space>", "<C-w>w")
 
-map("n", "te", ":tabedit<cr>")
+map("n", "<leader>te", ":tabedit<cr>")
 
 map("n", "<Tab>", ":bnext<cr>")
 map("n", "<S-Tab>", ":bprevious<cr>")
