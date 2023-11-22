@@ -3,7 +3,7 @@ return {
         "rcarriga/nvim-notify",
         opts = {
             timeout = 5000,
-            background_color = "#000000",
+            background_colour = "#000000",
         },
     },
 
@@ -14,14 +14,7 @@ return {
         event = "BufReadPre",
         priority = 1200,
         config = function()
-            local colors = require("solarized-osaka.colors").setup()
             require("incline").setup({
-                highlight = {
-                    groups = {
-                        InclineNormal = { guibg = colors.magenta500, guifg = colors.base04 },
-                        InclineNormalNC = { guifg = colors.violet500, guibg = colors.base03 },
-                    },
-                },
                 window = { margin = { vertical = 0, horizontal = 1 } },
                 hide = {
                     cursorline = true,
@@ -45,43 +38,37 @@ return {
         event = "VeryLazy",
         opts = {
             options = {
-                icons_enabled = false,
                 theme = "auto",
-                component_separators = { left = "", right = "" },
-                section_separators = { left = "", right = "" },
-                disabled_filetypes = {
-                    statusline = {},
-                    winbar = {},
-                },
-                ignore_focus = {},
-                always_divide_middle = true,
-                globalstatus = false,
-                refresh = {
-                    statusline = 1000,
-                    tabline = 1000,
-                    winbar = 1000,
-                },
             },
-            sections = {
-                lualine_a = { "mode" },
-                lualine_b = { "branch", "diff", "diagnostics" },
-                lualine_c = { "filename" },
-                lualine_x = { "encoding", "fileformat", "filetype" },
-                lualine_y = { "progress" },
-                lualine_z = { "location" },
+        },
+    },
+
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+        },
+    },
+
+    -- buffer line
+    {
+        "akinsho/bufferline.nvim",
+        event = "VeryLazy",
+        keys = {
+            { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
+            { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
+        },
+        opts = {
+            options = {
+                mode = "tabs",
+                -- separator_style = "slant",
+                show_buffer_close_icons = false,
+                show_close_icon = false,
             },
-            inactive_sections = {
-                lualine_a = {},
-                lualine_b = {},
-                lualine_c = { "filename" },
-                lualine_x = { "location" },
-                lualine_y = {},
-                lualine_z = {},
-            },
-            tabline = {},
-            winbar = {},
-            inactive_winbar = {},
-            extensions = {},
         },
     },
 }
