@@ -7,3 +7,13 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.expandtab = true
 vim.opt.wrap = false -- No Wrap lines
+vim.opt.title = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.hlsearch = true
+vim.opt.backup = false
+vim.opt.showcmd = true
+vim.opt.laststatus = 2
+vim.opt.scrolloff = 10
+
+vim.b.autoformat = false
