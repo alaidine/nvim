@@ -1,6 +1,11 @@
 return {
     "ellisonleao/gruvbox.nvim",
     opts = function()
+        local transparent = true
+
+        if vim.g.neovide then
+            transparent = false
+        end
         return {
             undercurl = true,
             underline = true,
@@ -21,7 +26,7 @@ return {
             palette_overrides = {},
             overrides = {},
             dim_inactive = false,
-            transparent_mode = true,
+            transparent_mode = transparent,
         }
     end,
 }

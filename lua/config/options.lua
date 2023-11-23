@@ -15,5 +15,6 @@ vim.opt.backup = false
 vim.opt.showcmd = true
 vim.opt.laststatus = 2
 vim.opt.scrolloff = 10
+vim.opt.colorcolumn = "81"
 
-vim.b.autoformat = false
+vim.g.autoformat = false

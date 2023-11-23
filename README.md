@@ -1,1 +1,1 @@
-# My version of LazyVim
+# My version of 💤 LazyVim inspired by devaslife
