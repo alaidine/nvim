@@ -23,6 +23,12 @@ return {
             inlay_hints = { enabled = true },
             ---@type lspconfig.options
             servers = {
+                clangd = {
+                    cmd = {
+                        "clangd",
+                        "--header-insertion=never",
+                    },
+                },
                 cssls = {},
                 tailwindcss = {
                     root_dir = function(...)

@@ -95,6 +95,12 @@ return {
             "MunifTanjim/nui.nvim",
             -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         },
+        opts = {
+            hijack_netrw_behavior = "disabled",
+            window = {
+                width = 30,
+            },
+        },
     },
 
     -- buffer line
@@ -164,21 +170,9 @@ return {
 ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
 ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
-    ]]
-
+            ]]
 			logo = string.rep("\n", 8) .. logo .. "\n\n"
 			opts.config.header = vim.split(logo, "\n")
 		end,
 	},
-
-    {
-        "nvim-lualine/lualine.nvim",
-        opts = function(_, opts)
-            table.insert(opts.sections.lualine_x, {
-                function()
-                    return require("util.dashboard").status()
-                end,
-            })
-        end,
-    },
 }
