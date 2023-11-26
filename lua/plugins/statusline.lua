@@ -15,7 +15,7 @@ local colors = {
   orange   = '#FF8800',
   violet   = '#a9a1e1',
   magenta  = '#c678dd',
-  blue     = '#51afef',
+  blue     = '#458588',
   red      = '#ec5f67',
 }
 

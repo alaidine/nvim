@@ -30,6 +30,7 @@ map("n", "ss", ":split<cr>", opts)
 map("n", "sv", ":vsplit<cr>", opts)
 
 map("n", "te", ":tabedit<cr>")
+map("n", "<leader>r", ":IncRename")
 
 map("n", "<C-j>", function()
     vim.diagnostic.goto_next()

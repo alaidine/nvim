@@ -4,8 +4,6 @@
 -- disable netrw at the very start of your init.lua
 vim.opt.smarttab = true
 vim.opt.breakindent = true
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
 vim.opt.expandtab = true
 vim.opt.wrap = false -- No Wrap lines
 vim.opt.title = true
@@ -17,5 +15,19 @@ vim.opt.showcmd = true
 vim.opt.laststatus = 2
 vim.opt.scrolloff = 10
 vim.opt.colorcolumn = "81"
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 
 vim.g.autoformat = false
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = {
+        "html",
+        "typescript",
+        "javascript",
+        "typescriptreact",
+        "json",
+        "css"
+    },
+    command = "setlocal shiftwidth=2 tabstop=2"
+})

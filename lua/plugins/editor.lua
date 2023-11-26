@@ -38,9 +38,9 @@ return {
         opts = {
             keymaps = {
                 -- Open blame window
-                blame = "<Leader>gb",
+                blame = "<leader>gb",
                 -- Open file/folder in git repository
-                browse = "<Leader>go",
+                browse = "<leader>go",
             },
         },
     },
@@ -65,13 +65,13 @@ return {
                 desc = "Find Plugin File",
             },
             {
-                ";o",
+                "<leader>fo",
                 function()
                     require("telescope.builtin").oldfiles()
                 end
             },
             {
-                ";f",
+                "<leader>ff",
                 function()
                     local builtin = require("telescope.builtin")
                     builtin.find_files({
@@ -82,7 +82,7 @@ return {
                 desc = "Lists files in your current working directory, respects .gitignore",
             },
             {
-                ";r",
+                "<leader>fg",
                 function()
                     local builtin = require("telescope.builtin")
                     builtin.live_grep()
@@ -90,7 +90,7 @@ return {
                 desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
             },
             {
-                ";b",
+                "<leader>fb",
                 function()
                     local builtin = require("telescope.builtin")
                     builtin.buffers()
@@ -98,7 +98,7 @@ return {
                 desc = "Lists open buffers",
             },
             {
-                ";t",
+                "<leader>fh",
                 function()
                     local builtin = require("telescope.builtin")
                     builtin.help_tags()
@@ -106,7 +106,7 @@ return {
                 desc = "Lists available help tags and opens a new window with the relevant help info on <cr>",
             },
             {
-                ";;",
+                "\\\\\\",
                 function()
                     local builtin = require("telescope.builtin")
                     builtin.resume()
@@ -114,7 +114,7 @@ return {
                 desc = "Resume the previous telescope picker",
             },
             {
-                ";e",
+                "<leader>fd",
                 function()
                     local builtin = require("telescope.builtin")
                     builtin.diagnostics()
@@ -122,7 +122,7 @@ return {
                 desc = "Lists Diagnostics for all open buffers or a specific buffer",
             },
             {
-                ";s",
+                "<leader>fp",
                 function()
                     local builtin = require("telescope.builtin")
                     builtin.treesitter()
