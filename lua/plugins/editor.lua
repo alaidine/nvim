@@ -65,12 +65,6 @@ return {
                 desc = "Find Plugin File",
             },
             {
-                "<leader>fo",
-                function()
-                    require("telescope.builtin").oldfiles()
-                end
-            },
-            {
                 "<leader>ff",
                 function()
                     local builtin = require("telescope.builtin")

@@ -9,7 +9,7 @@ discipline.cowboy()
 
 map("n", "<space><space>", "<C-w>w")
 
-map("n", "<leader>te", ":tabedit<cr>")
+map("n", "te", ":tabedit")
 
 map("n", "<leader>bd", ":bdelete<cr>")
 map("n", "<leader>bn", ":bnext<cr>")
@@ -29,7 +29,6 @@ map("n", "<leader>th", ":ToggleTerm<cr>")
 map("n", "ss", ":split<cr>", opts)
 map("n", "sv", ":vsplit<cr>", opts)
 
-map("n", "te", ":tabedit<cr>")
 map("n", "<leader>r", ":IncRename")
 
 map("n", "<C-j>", function()
