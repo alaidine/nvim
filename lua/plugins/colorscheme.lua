@@ -40,5 +40,15 @@ return {
             transparent = true,
             style = "night",
         },
+    },
+
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 100,
+        opts = {
+            flavour = "mocha",
+            transparent_background = true,
+        }
     }
 }

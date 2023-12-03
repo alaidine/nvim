@@ -175,4 +175,16 @@ return {
 			opts.config.header = vim.split(logo, "\n")
 		end,
 	},
+
+	-- statusline
+	{
+		"nvim-lualine/lualine.nvim",
+		event = "VeryLazy",
+		opts = {
+			options = {
+				-- globalstatus = false,
+				theme = "auto",
+			},
+		},
+	},
 }
