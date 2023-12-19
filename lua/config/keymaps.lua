@@ -7,7 +7,6 @@ local discipline = require("alaidine.discipline")
 
 -- discipline.cowboy()
 
-map("n", "<space><space>", "<C-w>w")
 
 map("n", "te", ":tabedit")
 
@@ -25,6 +24,8 @@ map("n", "<leader>tf", ":ToggleTerm direction=float<cr>")
 map("n", "<leader>tv", ":ToggleTerm direction=vertical size=50<cr>")
 map("n", "<leader>tt", ":ToggleTerm direction=tab<cr>")
 map("n", "<leader>th", ":ToggleTerm<cr>")
+
+map("n", "<leader>dt", ":TroubleToggle<cr>")
 
 map("n", "ss", ":split<cr>", opts)
 map("n", "sv", ":vsplit<cr>", opts)

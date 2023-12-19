@@ -1,11 +1,12 @@
+
 return {
     {
         "ellisonleao/gruvbox.nvim",
         opts = function()
-            local transparent = true
+            local enable_transparency = true
 
             if vim.g.neovide then
-                transparent = false
+                enable_transparency = false
             end
             return {
                 undercurl = true,
@@ -27,7 +28,7 @@ return {
                 palette_overrides = {},
                 overrides = {},
                 dim_inactive = false,
-                transparent_mode = transparent,
+                transparent_mode = enable_transparency,
             }
         end,
     },
@@ -39,6 +40,10 @@ return {
         opts = {
             transparent = true,
             style = "night",
+            styles = {
+                sidebars = "transparent",
+                floats = "transparent",
+            }
         },
     },
 
@@ -46,9 +51,53 @@ return {
         "catppuccin/nvim",
         name = "catppuccin",
         priority = 100,
+        opts = function()
+            local enable_transparency = true
+
+            if vim.g.neovide then
+                enable_transparency = false
+            end
+            return {
+                flavour = "mocha",
+                transparent_background = enable_transparency,
+            }
+        end,
+    },
+
+    {
+        "bluz71/vim-nightfly-colors",
+        name = "nightfly",
+        lazy = false,
+        priority = 1000
+    },
+
+	{
+		"craftzdog/solarized-osaka.nvim",
+		lazy = true,
+		priority = 1000,
+		opts = function()
+            local enable_transparency = true
+
+            if vim.g.neovide then
+                enable_transparency = false
+            end
+			return {
+				transparent = enable_transparency,
+                styles = {
+                    sidebars = "transparent",
+                    floats = "transparent",
+                }
+			}
+		end,
+	},
+
+    {
+        "tiagovla/tokyodark.nvim",
         opts = {
-            flavour = "mocha",
             transparent_background = true,
-        }
-    }
+        },
+        config = function(_, opts)
+            require("tokyodark").setup(opts)
+        end,
+    },
 }
