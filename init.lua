@@ -1,10 +1,5 @@
-require("alaidine.base")
-require("alaidine.highlights")
-require("alaidine.maps")
-require("alaidine.plugins")
-
-local function setColorscheme(colors)
-	require("alaidine.colors." .. colors)
+if vim.loader then
+    vim.loader.enable()
 end
 
-setColorscheme("gruvbox")
+require("config.lazy")
