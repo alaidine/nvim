@@ -5,7 +5,7 @@
 vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.expandtab = true
-vim.opt.wrap = false -- No Wrap lines
+-- vim.opt.wrap = false -- No Wrap lines
 vim.opt.title = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
@@ -29,7 +29,7 @@ vim.api.nvim_create_autocmd("FileType", {
         "javascript",
         "typescriptreact",
         "json",
-        "css"
+        "css",
     },
-    command = "setlocal shiftwidth=2 tabstop=2"
+    command = "setlocal shiftwidth=2 tabstop=2",
 })

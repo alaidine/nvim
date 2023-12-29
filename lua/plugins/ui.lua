@@ -136,34 +136,28 @@ return {
     },
 
     {
-        "akinsho/toggleterm.nvim",
-        version = "*",
-        opts = {
-            float_opts = {
-                border = 'curved'
-            },
-        }
+        "NvChad/nvterm",
     },
 
     "kdheepak/lazygit.nvim",
     "folke/twilight.nvim",
 
-	-- animations
-	{
-		"echasnovski/mini.animate",
-		event = "VeryLazy",
-		opts = function(_, opts)
-			opts.scroll = {
-				enable = false,
-			}
-		end,
-	},
+    -- animations
+    {
+        "echasnovski/mini.animate",
+        event = "VeryLazy",
+        opts = function(_, opts)
+            opts.scroll = {
+                enable = false,
+            }
+        end,
+    },
 
-	{
-		"nvimdev/dashboard-nvim",
-		event = "VimEnter",
-		opts = function(_, opts)
-			local logo = [[
+    {
+        "nvimdev/dashboard-nvim",
+        event = "VimEnter",
+        opts = function(_, opts)
+            local logo = [[
                                       __              
                                      |  \             
  _______   ______   ______  __     __ \▓▓______ ____  
@@ -174,22 +168,22 @@ return {
 | ▓▓  | ▓▓\▓▓     \\▓▓    ▓▓   \▓▓▓  | ▓▓ ▓▓ | ▓▓ | ▓▓
  \▓▓   \▓▓ \▓▓▓▓▓▓▓ \▓▓▓▓▓▓     \▓    \▓▓\▓▓  \▓▓  \▓▓
             ]]
-			logo = string.rep("\n", 8) .. logo .. "\n\n"
-			opts.config.header = vim.split(logo, "\n")
-		end,
-	},
+            logo = string.rep("\n", 8) .. logo .. "\n\n"
+            opts.config.header = vim.split(logo, "\n")
+        end,
+    },
 
-	-- statusline
-	{
-		"nvim-lualine/lualine.nvim",
-		event = "VeryLazy",
-		opts = {
-			options = {
-				-- globalstatus = false,
-				theme = "auto",
-			},
-		},
-	},
+    -- statusline
+    {
+        "nvim-lualine/lualine.nvim",
+        event = "VeryLazy",
+        opts = {
+            options = {
+                -- globalstatus = false,
+                theme = "auto",
+            },
+        },
+    },
 
     {
         "utilyre/barbecue.nvim",
@@ -198,10 +192,10 @@ return {
         version = "*",
         dependencies = {
             "SmiteshP/nvim-navic",
-            "nvim-tree/nvim-web-devicons"
+            "nvim-tree/nvim-web-devicons",
         },
         opt = {
             theme = "tokyonight",
-        }
-    }
+        },
+    },
 }

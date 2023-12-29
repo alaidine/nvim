@@ -26,7 +26,7 @@ return {
 		"ThePrimeagen/refactoring.nvim",
 		keys = {
 			{
-				"<leader>r",
+				"<leader>re",
 				function()
 					require("refactoring").select_refactor()
 				end,
@@ -95,5 +95,5 @@ return {
 		end,
 	},
 
-    "HelifeWasTaken/VimTek",
+    "HelifeWasTaken/VimTek"
 }

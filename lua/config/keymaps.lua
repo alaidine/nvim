@@ -20,17 +20,11 @@ map("n", "<leader>l", ":LazyGit<cr>")
 
 map("n", "<C-m>", "<C-i>", opts)
 
-map("n", "<leader>tf", ":ToggleTerm direction=float<cr>")
-map("n", "<leader>tv", ":ToggleTerm direction=vertical size=50<cr>")
-map("n", "<leader>tt", ":ToggleTerm direction=tab<cr>")
-map("n", "<leader>th", ":ToggleTerm<cr>")
-
-map("n", "<leader>dt", ":TroubleToggle<cr>")
 
 map("n", "ss", ":split<cr>", opts)
 map("n", "sv", ":vsplit<cr>", opts)
 
-map("n", "<leader>r", ":IncRename")
+map("n", "<leader>rr", ":IncRename")
 
 map("n", "<C-j>", function()
     vim.diagnostic.goto_next()
