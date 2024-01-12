@@ -95,5 +95,6 @@ return {
 		end,
 	},
 
-    "HelifeWasTaken/VimTek"
+    "HelifeWasTaken/VimTek",
+    "lervag/vimtex",
 }
