@@ -28,6 +28,7 @@ return {
                         "clangd",
                         "--header-insertion=never",
                     },
+                    capabilities = { "utf-8", "utf-16" },
                 },
                 cssls = {},
                 tailwindcss = {
