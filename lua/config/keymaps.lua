@@ -3,7 +3,6 @@
 -- Add any additional keymaps here
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
-local discipline = require("alaidine.discipline")
 
 -- discipline.cowboy()
 
