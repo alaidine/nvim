@@ -10,7 +10,7 @@ return {
 
     {
         "rcarriga/nvim-notify",
-        enabled = false
+        enabled = false,
     },
 
     -- filename
@@ -159,10 +159,10 @@ return {
             require("nvim-surround").setup({
                 -- Configuration here, or leave empty to use defaults
             })
-        end
+        end,
     },
 
     {
-        "eandrju/cellular-automaton.nvim" 
+        "eandrju/cellular-automaton.nvim",
     },
 }
