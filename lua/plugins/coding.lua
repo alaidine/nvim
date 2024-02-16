@@ -105,4 +105,5 @@ return {
 
     "HelifeWasTaken/VimTek",
     "lervag/vimtex",
+    "ThePrimeagen/git-worktree.nvim",
 }
