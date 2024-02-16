@@ -1,8 +1,7 @@
 return {
     {
         "folke/noice.nvim",
-        notify = {
-            enabled = false,
+        opts = {
             notify = {
                 enabled = false,
             },
