@@ -1,14 +1,10 @@
 return {
     {
         "folke/noice.nvim",
-        opts = {
-<<<<<<< HEAD
         notify = {
             enabled = false,
-=======
             notify = {
                 enabled = false,
->>>>>>> main
             },
         },
     },
@@ -157,10 +153,10 @@ return {
     },
 
     {
-<<<<<<< HEAD
-        "eandrju/cellular-automaton.nvim" 
-    }
-=======
+        "eandrju/cellular-automaton.nvim",
+    },
+
+    {
         "kylechui/nvim-surround",
         version = "*", -- Use for stability; omit to use `main` branch for the latest features
         event = "VeryLazy",
@@ -174,5 +170,4 @@ return {
     {
         "eandrju/cellular-automaton.nvim",
     },
->>>>>>> main
 }
