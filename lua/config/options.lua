@@ -19,7 +19,7 @@ vim.opt.colorcolumn = "81"
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 
--- vim.g.autoformat = false
+vim.g.autoformat = false
 vim.g.nightflyTransparent = true
 
 vim.api.nvim_create_autocmd("FileType", {
