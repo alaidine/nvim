@@ -8,10 +8,17 @@ return {
       },
       languages = {
         {
-          filetypes = { "rust", "c", "cpp" },
+          filetypes = { "zig", "rust", "c", "cpp" },
           config = {
             tabwidth = 4,
             expandtab = true,
+          },
+        },
+        {
+          filetypes = { "make" },
+          config = {
+            tabwidth = 4,
+            expandtab = false,
           },
         },
       },
