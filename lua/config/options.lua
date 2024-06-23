@@ -4,3 +4,22 @@
 local opt = vim.opt
 
 opt.scrolloff = 10
+opt.cursorline = false
+
+P = function(...)
+  local args = {}
+  for _, arg in ipairs({ ... }) do
+    table.insert(args, vim.inspect(arg))
+  end
+  print(unpack(args))
+  return ...
+end
+
+RELOAD = function(...)
+  return require("plenary.reload").reload_module(...)
+end
+
+R = function(name)
+  RELOAD(name)
+  require(name)
+end
