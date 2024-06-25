@@ -23,3 +23,5 @@ R = function(name)
   RELOAD(name)
   require(name)
 end
+
+vim.g.autoformat = false
