@@ -8,7 +8,7 @@ return {
       },
       languages = {
         {
-          filetypes = { "zig", "rust", "c", "cpp" },
+          filetypes = { "python", "zig", "rust", "c", "cpp" },
           config = {
             tabwidth = 4,
             expandtab = true,

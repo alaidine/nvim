@@ -8,3 +8,6 @@ map("n", "<leader>zm", "<cmd>ZenMode<cr>")
 vim.keymap.set("n", "<leader>rn", function()
   return ":IncRename " .. vim.fn.expand("<cword>")
 end, { expr = true })
+
+vim.keymap.del("n", "<M-j>")
+vim.keymap.del("n", "<M-k>")
