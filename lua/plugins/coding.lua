@@ -40,5 +40,12 @@ return {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     },
+
+    {
+      "nvim-neorg/neorg",
+      lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+      version = "*", -- Pin Neorg to the latest stable release
+      config = true,
+    },
   },
 }
