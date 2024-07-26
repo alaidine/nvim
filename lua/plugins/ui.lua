@@ -210,4 +210,11 @@ $$ |  $$ |  \$  /   $$ |$$ | $$ | $$ |
       vim.opt.colorcolumn = "80"
     end,
   },
+
+  {
+    "norcalli/nvim-colorizer.lua",
+    config = function ()
+      require('colorizer').setup()
+    end
+  }
 }
