@@ -5,6 +5,7 @@ local opt = vim.opt
 
 opt.scrolloff = 10
 opt.cursorline = false
+opt.colorcolumn = "80"
 
 P = function(...)
   local args = {}
