@@ -18,7 +18,7 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "~/ghq/github.com/alaidine/obisdian-vault",
+        path = "~/Documents/Obsidian Vault/",
       },
       -- {
       --   name = "work",
