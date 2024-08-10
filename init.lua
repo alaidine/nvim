@@ -9,3 +9,4 @@ require('plugins')
 -- Load plugin-specific configurations
 require('plugins.treesitter')
 require('plugins.colors')
+require('plugins.lualine')

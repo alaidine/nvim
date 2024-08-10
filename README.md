@@ -9,16 +9,16 @@ The configuration files are organized in the following directory structure:
 ```
 ~/.config/nvim/
 ├── init.lua
-├── lua/
-│   ├── core/
-│   │   ├── options.lua
-│   │   ├── keymaps.lua
-│   │   └── autocmds.lua
-│   └── plugins/
-│       ├── colors.lua
-│       ├── treesitter.lua
-│       └── completion.lua
-└── plugins.lua
+└──── lua/
+    ├── core/
+    │   ├── options.lua
+    │   ├── keymaps.lua
+    │   └── autocmds.lua
+    └── plugins/
+        ├── colors.lua
+        ├── treesitter.lua
+        ├── init.lua
+        └── completion.lua
 ```
 
 - `init.lua`: The main entry point for Neovim's configuration. It loads the core configuration files and sets up the Vim-Plug plugin manager.
