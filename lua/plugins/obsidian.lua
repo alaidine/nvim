@@ -20,10 +20,10 @@ return {
         name = "personal",
         path = "~/Documents/Obsidian Vault/",
       },
-      -- {
-      --   name = "work",
-      --   path = "~/vaults/work",
-      -- },
+      {
+        -- name = "personal",
+        -- path = "~/Obsidian Vault",
+      },
     },
   },
 }
