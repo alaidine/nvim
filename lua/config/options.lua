@@ -6,6 +6,7 @@ local opt = vim.opt
 opt.scrolloff = 10
 opt.cursorline = false
 opt.colorcolumn = "80"
+opt.guicursor = ""
 
 P = function(...)
   local args = {}
