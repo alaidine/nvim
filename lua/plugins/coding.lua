@@ -45,4 +45,8 @@ return {
   {
     "tpope/vim-fugitive",
   },
+
+  {
+    'editorconfig/editorconfig-vim',
+  },
 }
