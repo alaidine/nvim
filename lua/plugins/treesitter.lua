@@ -2,7 +2,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   version = false, -- last release is way too old and doesn't work on Windows
   build = ":TSUpdate",
-  event = { "LazyFile", "VeryLazy" },
+  event = { "VeryLazy" },
   lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
   init = function(plugin)
     -- PERF: add nvim-treesitter queries to the rtp and it's custom query predicates early
@@ -71,9 +71,6 @@ return {
   },
   ---@param opts TSConfig
   config = function(_, opts)
-    if type(opts.ensure_installed) == "table" then
-      opts.ensure_installed = LazyVim.dedup(opts.ensure_installed)
-    end
     require("nvim-treesitter.configs").setup(opts)
 
     local parser_config = require("nvim-treesitter.parsers").get_parser_configs()

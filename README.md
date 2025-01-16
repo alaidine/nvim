@@ -1,6 +1,6 @@
 # My Neovim Configuration
 
-This is my personal Neovim configuration based on the [LazyVim](https://github.com/LazyVim/LazyVim) starter template.
+This is my personal Neovim configuration based on the [lazy.nvim](https://github.com/folke/lazy.nvim.git) plugin manager.
 
 ## Features
 
@@ -8,7 +8,6 @@ This is my personal Neovim configuration based on the [LazyVim](https://github.c
 - Modern UI with gruvbox theme
 - Syntax highlighting and autocompletion
 - File explorer with neo-tree
-- Fuzzy finding with telescope
 - Git integration
 - LSP support for various languages
 - Treesitter for better syntax understanding
