@@ -5,7 +5,7 @@ This is my personal Neovim configuration based on the [lazy.nvim](https://github
 ## Features
 
 - Fast startup time with lazy-loading plugins
-- Modern UI with gruvbox theme
+- Modern UI with catppuccin theme
 - Syntax highlighting and autocompletion
 - File explorer with neo-tree
 - Git integration
@@ -41,13 +41,12 @@ git clone https://github.com/yourusername/nvim-config.git ~/.config/nvim
 nvim
 ```
 
-LazyVim will automatically install plugins on the first run.
+lazy.nvim will automatically install plugins on the first run.
 
 ## Customization
 
 - Add or modify plugins in `lua/plugins`
-- Adjust keymaps in `lua/config/keymaps.lua`
-- Change options in `lua/config/options.lua`
+- Adjust keymaps or change options in `lua/config/lazy.lua`
 
 ## Contributing
 
