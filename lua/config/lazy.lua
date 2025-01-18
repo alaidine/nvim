@@ -48,7 +48,10 @@ end
 
 local map = vim.keymap.set
 
-map("n", "<leader>ff", "<cmd>FzfLua files<cr>")
+map("n", "<leader><leader>", "<cmd>FzfLua<cr>", { desc = "FzfLua" })
+map("n", "<leader>ff", "<cmd>FzfLua files<cr>", { desc = "find files" })
+
+map("n", "<leader>e", "<cmd>Ex<cr>", { desc = "Explore" })
 
 -- Setup lazy.nvim
 require("lazy").setup({
@@ -60,5 +63,5 @@ require("lazy").setup({
   -- colorscheme that will be used when installing plugins.
   install = { colorscheme = { "catppuccin" } },
   -- automatically check for plugin updates
-  checker = { enabled = true },
+  checker = { enabled = false },
 })

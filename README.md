@@ -7,9 +7,6 @@ This is my personal Neovim configuration based on the [lazy.nvim](https://github
 - Fast startup time with lazy-loading plugins
 - Modern UI with catppuccin theme
 - Syntax highlighting and autocompletion
-- File explorer with neo-tree
-- Git integration
-- LSP support for various languages
 - Treesitter for better syntax understanding
 - And more!
 
