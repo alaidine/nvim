@@ -27,6 +27,7 @@ opt.number = true
 opt.scrolloff = 10
 opt.colorcolumn = "80"
 opt.guicursor = ""
+opt.clipboard = "unnamedplus"
 
 P = function(...)
   local args = {}
@@ -44,6 +45,11 @@ end
 R = function(name)
   RELOAD(name)
   require(name)
+end
+
+SETUP = function(name)
+  RELOAD(name)
+  require(name).setup()
 end
 
 local map = vim.keymap.set
