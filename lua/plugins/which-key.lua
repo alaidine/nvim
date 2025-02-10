@@ -20,7 +20,7 @@ return {
 
     wk.add({
       { "<leader>f", group = "file" },
-      { "<leader>h", group = "epitech header" }
+      { "<leader>h", group = "epitech header" },
     })
-  end
+  end,
 }
