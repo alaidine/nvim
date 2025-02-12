@@ -1,5 +1,9 @@
 return {
   {
+    "norcalli/nvim-colorizer.lua",
+    opts = {}
+  },
+  {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
