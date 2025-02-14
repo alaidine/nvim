@@ -4,7 +4,7 @@ return {
     -- follow latest release.
     version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
     -- install jsregexp (optional!).
-    build = "make install_jsregexp"
+    build = "make install_jsregexp",
   },
   { "onsails/lspkind.nvim" },
   { "saadparwaiz1/cmp_luasnip" },
@@ -14,96 +14,96 @@ return {
     "hrsh7th/nvim-cmp",
     opts = function()
       local cmp = require("cmp")
-      require('luasnip.loaders.from_vscode').lazy_load()
+      require("luasnip.loaders.from_vscode").lazy_load()
 
       return {
         formatting = {
-          fields = { 'abbr', 'kind', 'menu' },
-          format = require('lspkind').cmp_format({
-            mode = 'symbol',       -- show only symbol annotations
-            maxwidth = 50,         -- prevent the popup from showing more than provided characters
-            ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
-          })
+          fields = { "abbr", "kind", "menu" },
+          format = require("lspkind").cmp_format({
+            mode = "symbol", -- show only symbol annotations
+            maxwidth = 50, -- prevent the popup from showing more than provided characters
+            ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
+          }),
         },
-        preselect = 'item',
+        preselect = "item",
         completion = {
-          completeopt = 'menu,menuone,noinsert'
+          completeopt = "menu,menuone,noinsert",
         },
         sources = {
-          { name = 'nvim_lsp' },
-          { name = 'buffer' },
-          { name = 'luasnip' },
+          { name = "nvim_lsp" },
+          { name = "buffer" },
+          { name = "luasnip" },
         },
         mapping = cmp.mapping.preset.insert({
           -- Navigate between completion items
-          ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = 'select' }),
-          ['<C-n>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
+          ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
+          ["<C-n>"] = cmp.mapping.select_next_item({ behavior = "select" }),
 
           -- `Enter` key to confirm completion
-          ['<CR>'] = cmp.mapping.confirm({ select = true }),
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
 
           -- Ctrl+Space to trigger completion menu
-          ['<C-Space>'] = cmp.mapping.complete(),
+          ["<C-Space>"] = cmp.mapping.complete(),
 
           -- Scroll up and down in the completion documentation
-          ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-d>'] = cmp.mapping.scroll_docs(4),
+          ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+          ["<C-d>"] = cmp.mapping.scroll_docs(4),
 
-          ['<C-f>'] = cmp.mapping(function(fallback)
-            local luasnip = require('luasnip')
+          ["<C-f>"] = cmp.mapping(function(fallback)
+            local luasnip = require("luasnip")
             if luasnip.locally_jumpable(1) then
               luasnip.jump(1)
             else
               fallback()
             end
-          end, { 'i', 's' }),
+          end, { "i", "s" }),
 
           -- Jump to the previous snippet placeholder
-          ['<C-b>'] = cmp.mapping(function(fallback)
-            local luasnip = require('luasnip')
+          ["<C-b>"] = cmp.mapping(function(fallback)
+            local luasnip = require("luasnip")
             if luasnip.locally_jumpable(-1) then
               luasnip.jump(-1)
             else
               fallback()
             end
-          end, { 'i', 's' }),
+          end, { "i", "s" }),
 
           -- Super tab
-          ['<Tab>'] = cmp.mapping(function(fallback)
-            local luasnip = require('luasnip')
-            local col = vim.fn.col('.') - 1
+          ["<Tab>"] = cmp.mapping(function(fallback)
+            local luasnip = require("luasnip")
+            local col = vim.fn.col(".") - 1
 
             if cmp.visible() then
-              cmp.select_next_item({ behavior = 'select' })
+              cmp.select_next_item({ behavior = "select" })
             elseif luasnip.expand_or_locally_jumpable() then
               luasnip.expand_or_jump()
-            elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+            elseif col == 0 or vim.fn.getline("."):sub(col, col):match("%s") then
               fallback()
             else
               cmp.complete()
             end
-          end, { 'i', 's' }),
+          end, { "i", "s" }),
 
           -- Super shift tab
-          ['<S-Tab>'] = cmp.mapping(function(fallback)
-            local luasnip = require('luasnip')
+          ["<S-Tab>"] = cmp.mapping(function(fallback)
+            local luasnip = require("luasnip")
 
             if cmp.visible() then
-              cmp.select_prev_item({ behavior = 'select' })
+              cmp.select_prev_item({ behavior = "select" })
             elseif luasnip.locally_jumpable(-1) then
               luasnip.jump(-1)
             else
               fallback()
             end
-          end, { 'i', 's' }),
+          end, { "i", "s" }),
         }),
         snippet = {
           expand = function(args)
-            require('luasnip').lsp_expand(args.body)
+            require("luasnip").lsp_expand(args.body)
           end,
         },
       }
-    end
+    end,
   },
   { "williamboman/mason.nvim", opts = {} },
   {
@@ -117,17 +117,17 @@ return {
       -- This should be executed before you configure any language server
       local lspconfig_defaults = require("lspconfig").util.default_config
       lspconfig_defaults.capabilities =
-          vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, require("cmp_nvim_lsp").default_capabilities())
+        vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, require("cmp_nvim_lsp").default_capabilities())
 
       local buffer_autoformat = function(bufnr)
-        local group = 'lsp_autoformat'
+        local group = "lsp_autoformat"
         vim.api.nvim_create_augroup(group, { clear = false })
         vim.api.nvim_clear_autocmds({ group = group, buffer = bufnr })
 
-        vim.api.nvim_create_autocmd('BufWritePre', {
+        vim.api.nvim_create_autocmd("BufWritePre", {
           buffer = bufnr,
           group = group,
-          desc = 'LSP format on save',
+          desc = "LSP format on save",
           callback = function()
             -- note: do not enable async formatting
             vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
@@ -136,7 +136,9 @@ return {
       end
 
       local allow_format = function(servers)
-        return function(client) return vim.tbl_contains(servers, client.name) end
+        return function(client)
+          return vim.tbl_contains(servers, client.name)
+        end
       end
 
       -- Save without formatting
@@ -159,15 +161,15 @@ return {
           vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
           vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
           vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
-          vim.keymap.set({ 'n', 'x' }, 'gq', function()
+          vim.keymap.set({ "n", "x" }, "gq", function()
             vim.lsp.buf.format({
               async = false,
               timeout_ms = 10000,
-              filter = allow_format({ 'lua_ls', 'rust_analyzer' })
+              filter = allow_format({ "lua_ls", "rust_analyzer" }),
             })
           end, opts)
 
-          local id = vim.tbl_get(event, 'data', 'client_id')
+          local id = vim.tbl_get(event, "data", "client_id")
           local client = id and vim.lsp.get_client_by_id(id)
           if client == nil then
             return
@@ -176,7 +178,7 @@ return {
           -- Disable semantic highlights
           client.server_capabilities.semanticTokensProvider = nil
 
-          if client.supports_method('textDocument/formatting') then
+          if client.supports_method("textDocument/formatting") then
             buffer_autoformat(event.buf)
           end
         end,

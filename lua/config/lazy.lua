@@ -18,6 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
@@ -57,8 +58,15 @@ local map = vim.keymap.set
 
 map("n", "<leader><leader>", "<cmd>FzfLua<cr>", { desc = "FzfLua" })
 map("n", "<leader>ff", "<cmd>FzfLua files<cr>", { desc = "find files" })
+map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "toggle nvim-tree" })
+map("n", "<leader>g", ":Git ", { desc = "fugitive" })
+map("n", "j", "gj")
+map("n", "k", "gk")
 
-map("n", "<leader>e", "<cmd>Ex<cr>", { desc = "Explore" })
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+vim.opt.termguicolors = true
 
 -- Setup lazy.nvim
 require("lazy").setup({

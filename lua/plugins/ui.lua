@@ -1,8 +1,9 @@
 return {
   {
-    "norcalli/nvim-colorizer.lua",
-    opts = {}
+    "nvim-tree/nvim-tree.lua",
+    opts = {},
   },
+  { "norcalli/nvim-colorizer.lua" },
   {
     "catppuccin/nvim",
     name = "catppuccin",
