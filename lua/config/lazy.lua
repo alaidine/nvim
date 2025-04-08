@@ -6,7 +6,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   if vim.v.shell_error ~= 0 then
     vim.api.nvim_echo({
       { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
+      { out,                            "WarningMsg" },
       { "\nPress any key to exit..." },
     }, true, {})
     vim.fn.getchar()
@@ -18,6 +18,10 @@ vim.opt.rtp:prepend(lazypath)
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
+
+if vim.g.neovide then
+  vim.o.guifont = "JetBrainsMono Nerd Font:h11"
+end
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
@@ -62,6 +66,7 @@ map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "toggle nvim-tree" })
 map("n", "<leader>g", ":Git ", { desc = "fugitive" })
 map("n", "j", "gj")
 map("n", "k", "gk")
+map("n", "<leader>w", "<C-w>")
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -76,7 +81,7 @@ require("lazy").setup({
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "gruvbox" } },
+  install = { colorscheme = { "tokyonight", "catppuccin", "gruvbox-material" } },
   -- automatically check for plugin updates
   checker = { enabled = false },
 })

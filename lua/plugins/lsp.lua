@@ -20,8 +20,8 @@ return {
         formatting = {
           fields = { "abbr", "kind", "menu" },
           format = require("lspkind").cmp_format({
-            mode = "symbol", -- show only symbol annotations
-            maxwidth = 50, -- prevent the popup from showing more than provided characters
+            mode = "symbol",       -- show only symbol annotations
+            maxwidth = 50,         -- prevent the popup from showing more than provided characters
             ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
           }),
         },
@@ -117,7 +117,13 @@ return {
       -- This should be executed before you configure any language server
       local lspconfig_defaults = require("lspconfig").util.default_config
       lspconfig_defaults.capabilities =
-        vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, require("cmp_nvim_lsp").default_capabilities())
+          vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, require("cmp_nvim_lsp").default_capabilities())
+
+      local allow_format = function(servers)
+        return function(client)
+          return vim.tbl_contains(servers, client.name)
+        end
+      end
 
       local buffer_autoformat = function(bufnr)
         local group = "lsp_autoformat"
@@ -130,15 +136,13 @@ return {
           desc = "LSP format on save",
           callback = function()
             -- note: do not enable async formatting
-            vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
+            vim.lsp.buf.format({
+              async = false,
+              timeout_ms = 10000,
+              filter = allow_format({ "lua_ls", "rust_analyzer" }),
+            })
           end,
         })
-      end
-
-      local allow_format = function(servers)
-        return function(client)
-          return vim.tbl_contains(servers, client.name)
-        end
       end
 
       -- Save without formatting
@@ -150,7 +154,6 @@ return {
         desc = "LSP actions",
         callback = function(event)
           local opts = { buffer = event.buf }
-
           vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
           vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
           vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
@@ -165,7 +168,7 @@ return {
             vim.lsp.buf.format({
               async = false,
               timeout_ms = 10000,
-              filter = allow_format({ "lua_ls", "rust_analyzer" }),
+              filter = allow_format({ "clangd", "lua_ls", "rust_analyzer" }),
             })
           end, opts)
 
